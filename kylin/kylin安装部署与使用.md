@@ -62,7 +62,19 @@ pcre编译
 [root@bdnode10 pcre-8.43]# pcre-config --version
 8.43
 ```
-
+```
+./configure \
+--prefix=/opt/kylin/nginx-1.17.9 \
+--error-log-path=/opt/kylin/nginx-1.17.9/logs/error.log \
+--http-log-path=/opt/kylin/nginx-1.17.9/logs/access.log \
+--with-pcre=/opt/kylin/pcre-8.43 \
+--with-zlib=/opt/kylin/zlib-1.2.11 \
+--with-openssl=/opt/kylin/openssl-1.1.1d \
+--with-http_ssl_module \
+--with-stream \
+--without-http_empty_gif_module \
+--with-mail=dynamic 
+```
 ### 1.3、安装
 
 nginx安装
